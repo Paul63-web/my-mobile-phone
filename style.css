@@ -1,0 +1,389 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#vouch{
+	/*float: right;*/
+	/*padding-top: 100px;*/
+	margin-top: 35px;
+	margin-right: 30px;
+	background-color: #ABB1BA;
+	height: 615px !important; 
+	width: 330px;
+	border-radius:20px;
+	border: 7px solid #4EC5EF;
+}
+
+.main-phone{
+	height: 615px;
+	width: 330px;
+	margin-top: 35px;
+	margin-left: 40px;
+	border: 10px solid black;
+	border-radius: 20px;
+	/*margin-top: 20px solid black;*/
+	background-image: url(images/th.jpg);
+	background-size: cover;
+	float: left;
+	position: relative;
+}
+
+#notifyBar{
+	background-color: rgba(36, 88, 156, 0.1);
+	border-radius: 9px 9px 0 0;
+	float: left;
+	left: 298px; 
+	top: -2px; 
+	display: none;
+	/*left: 2%;*/
+	height: 20px;
+	width: 97%;
+	/* margin-top: 0px; */
+	/*background-color: transparent;*/
+}
+
+.on-btn{
+	height: 95px;
+	width: 1px;
+	border: 6px solid black;
+	background-color: black;
+	border-radius: 9px;
+	margin-left: -323px;
+	margin-top: 150px;
+}
+
+.vol-up{
+	height: 80px;
+	width: 1px;
+	border: 5px solid black;
+	background-color: black;
+	border-radius: 9px;
+	float: right;
+	margin-right: -13px;
+	margin-top: -85px;
+}
+
+.vol-down{
+	height: 80px;
+	width: 1px;
+	border: 5px solid black;
+	background-color: black;
+	border-radius: 9px;
+	float: right;
+	margin-right: -13px;
+	margin-top: -185px;
+}
+
+#apks{
+	position: absolute;
+	bottom: 8%;
+	left: -4%;
+	/*margin-left: -13px;*/
+}
+
+#ex{
+	position: absolute;
+	bottom: 15%;
+	left: 83.5%;
+}
+
+
+.term{
+	background-color: black;
+	height: 30px;
+	width: 100%;
+	position: absolute;
+	top: -3%;
+	border-radius: 3px 0 3px 0;
+}
+
+#on{
+	height: 600px;
+	width: 310px;
+	margin-top: 35px;
+	margin-left: 40px;
+}
+
+
+#bar{
+	background-color: black;
+	height: 5px;
+	width: 100px;
+	border-radius: 300px;
+	position: absolute;
+	bottom: 0%;
+	left: 20%;
+	cursor: pointer;
+	/* z-index: 1; */
+}
+
+.cards {
+  width: 250px;
+  height: 70px;
+  padding-top: 20px;
+  /*height: 60px;*/
+  background: #333;
+  margin-top: 20px;
+}
+.mtn_rand {
+	/*background: #333;*/
+	color:#fff;
+	width: 90px;
+	/*height: 80px;*/
+	/*margin-top: 10px;*/
+	/*padding-top: 10px;*/
+}
+
+::-webkit-scrollbar{
+	height: 0px;
+}
+#showvoucher{
+	background: red;
+	max-width: 300px;
+	max-height: 160px;
+	margin-top: 20px;
+	margin-left: 10px;
+	overflow: auto;
+}
+
+
+#time{
+	color: white;
+	font-size: 60px;
+	/*margin-bottom: -95px;*/
+}
+
+#date{
+	color: white;
+	font-size: 20px;
+	/*font-weight: bold;*/
+	font-family: serif;
+}
+
+#cover{
+	height: 595px;
+	width: 310px;
+	position: absolute;
+	/* margin-top: 29px; */
+	top: 0%;
+	background-color: #333;
+	border-radius: 10px 10px;
+	z-index: 1;
+}
+
+#noOfCards{
+	width: 200px;
+	height: 40px;
+	border: 4px solid #2196F3;
+	border-radius: 300px;
+	padding-left: 5px;
+	outline: none;
+	background-color: #4EC5EF;
+}
+
+#amount{
+	margin-top: 20px;
+	height: 35px;
+	width: 200px;
+	border: 4px solid #2196F3;
+	border-radius: 300px;
+	outline: none;
+	background-color: #4EC5EF;
+	color: #333;
+}
+
+#net{
+	height: 35px;
+	width: 200px;
+	border: 4px solid #2196F3;
+	border-radius: 300px;
+	outline: none;
+	background-color: #4EC5EF;
+	color: #333;
+}
+
+#dial{
+	height: 595px;
+	width: 310px;
+	/*position: absolute;*/
+	margin-top: -332px;
+	background-color: #eee;
+	border-radius: 10px 10px;
+	display: none;
+	/*z-index: 1;*/
+}
+
+#box{
+	height: 300px;
+	background-color: white;
+	position: absolute;
+	bottom: 9%;
+	width: 100%;
+}
+
+#bb{
+	height: 50px;
+	border-bottom: 1px solid #eee;
+}
+
+.btn-sucess{
+	border-radius: 100%;
+	height: 50px;
+	width: 50px;
+	background-color: #32C24D;
+}
+
+#balance-box{
+		height: 80px;
+		width: 270px;
+		background-color: #2196F3;
+		border: 1px solid #2196F3;
+		border-radius: 5px;
+		color: #fff;
+		position: absolute;
+		top: 40%;
+		left: 5%;
+		z-index: 1;
+		display: none;
+		user-select: none;
+	}
+
+#callwith {
+	width: 200px;
+	height: 200px;
+	background-color: #2196F3;
+	position: absolute;
+	top: -15%;
+	left: 20%;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+#outgoingopacity {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 310px;
+	border-radius: 10px;
+	/* background-color: blue; */
+	background-image: url(images/1574701667831.jpg);
+	height: 595px;
+	display: none;
+	/* z-index: 1; */
+}
+
+#outgoingcall {
+	height: 595px;
+	width: 310px;
+	position: absolute;
+	/* background-image: url(images/1574701667831.jpg); */
+	background-color: rgba(33, 29, 238, 0.5);
+	top: 0;
+	border-radius: 10px;
+	left: -161.3%;
+	/* z-index: -1; */
+}
+
+.speaker-btn {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+.mute-btn {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+.bullet-btn {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+}
+
+.hangup-btn {
+	height: 55px;
+	width: 55px;
+	border-radius: 100%;
+}
+
+#secondPhone {
+	height: 615px;
+	width: 330px;
+	margin-top: 35px;
+	margin-right: 40px;
+	border: 10px solid black;
+	border-radius: 20px;
+	background-image: url(images/88189327_645764946243789_3919373990807732224_n.jpg);	
+	background-size: cover;
+	float: right;
+	position: relative;	
+	display: none;
+}
+
+.on-btn-second{
+	height: 95px;
+	width: 1px;
+	border: 6px solid black;
+	background-color: black;
+	border-radius: 9px;
+	margin-left: -29px;
+	margin-top: 150px;
+}
+
+.vol-up-second{
+	height: 80px;
+	width: 1px;
+	border: 5px solid black;
+	background-color: black;
+	border-radius: 9px;
+	float: right;
+	margin-right: -29px;
+	margin-top: -85px;
+}
+
+.vol-down-second{
+	height: 80px;
+	width: 1px;
+	border: 5px solid black;
+	background-color: black;
+	border-radius: 9px;
+	float: right;
+	margin-right: -29px;
+	margin-top: -185px;
+}
+
+#notifyBarSecond{
+	border-radius: 9px 9px 0 0;
+	float: left;
+	top: 0px; 
+	left: 90%;
+	height: 20px;
+	width: 100%;
+	z-index: 1;
+	margin-top: 0px;
+	background-color: transparent;
+}
+
+#incoming-opacity {
+	height: 595px;
+	width: 310px;
+	position: absolute;
+	background-color: rgba(33, 29, 238, 0.6);
+	top: -10%;
+	border-radius: 10px;
+	right: -90%;
+	/* margin-top: -200px; */
+	z-index: -1;
+}
+
+.pickup-btn {
+	height: 55px;
+	width: 55px;
+	border-radius: 100%;
+}

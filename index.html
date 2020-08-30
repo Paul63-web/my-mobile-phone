@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Mobile Phone</title>
+	<link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="bootstrap-4.5.0-dist/js/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body onload="loadTime()">
+	<div id="vouch" style="display: none; float: right;">
+		<h1 align="center">Voucher Generator</h1>
+	<br>
+	<div align="center">
+		<input id="noOfCards" type="number" min="1" placeholder="No of cards" name="">
+	<select id="amount">
+		<option value="">Select Amount</option>
+		<option value="100">100</option>
+		<option value="200">200</option>
+		<option value="500">500</option>
+		<option value="1000">1000</option>
+	</select>
+	<br><br>
+	<select id="net">
+		<option value="">Select Network</option>
+		<option value="MTN">MTN</option>
+		<option value="GLO">GLO</option>
+		<option value="AIRTEL">AIRTEL</option>
+		<option value="9MOBILE">9MOBILE</option>
+	</select>
+	<br>
+     
+	<br>
+	</div>
+	<div align="center">
+		<button class="btn btn-primary" onclick="showCards()">Generate card</button>
+	</div>
+	<div id="showvoucher" align="center"></div>
+	<br>
+		<button class="btn btn-danger float-right mr-3" onclick="exit()">Exit Generator</button>
+	</div>
+	  		<!-- <div class="card">
+	  			<span class="_card">12345678</span>
+	  		</div> -->
+
+		<div id="main" ondblclick="switchon()" class="main-phone" align="center">
+			<div id="cover"></div>
+			<!-- <hr class="term"> -->
+		<div class="camera-div position-absolute" align="center" style="margin-left: -298px; margin-top: 3px; z-index: 1;">
+            <div style="height: 20px; width:20px; background-color: black; border-radius: 100%; border: 1px solid black; margin-left: 300px">
+            <div style="height: 10px; width: 10px; background-color: #ABB1BA; border-radius: 100%; border:1px solid #ABB1BA; margin-top: 4px;">
+                <div style="height: 5px; width: 5px; background-color: black; border-radius: 100%; border:1px solid black; margin-top: 2px; margin-left: -0.1px;">
+                    
+                </div>
+            </div>
+		</div>
+		<div id="notifyBar" class="pl-2 position-absolute">
+			<span><h6 id="time1" style="float: right; padding-right: 3px; padding-top: 2px; color:black;"></h6></span>
+			<span><img src="images/Low Connection_32px.png" alt="9mobile signal" style="height: 20px; width: 20px; float: right; margin-right: 5px;"></span>
+			<span><img src="images/Signal_32pxv.png" alt="glo signal" style="height: 20px; width: 20px; float: right;"></span>
+			<span><img src="images/Signal_32pxv.png" alt="airtel signal" style="height: 20px; width: 20px; float: right;"></span>
+			<span><img src="images/Signal_32px.png" alt="mtn signal" style="height: 20px; width: 20px; float: right;"></span>			
+		</div>
+        </div>
+		
+		<hr class="on-btn">
+		<hr class="vol-up">
+		<hr class="vol-down">
+
+		<div id="timeDiv" style="margin-top: -50px;">
+			<h4 id="time"></h4>	
+			<h6 id="date"></h6>
+		</div>
+		<div class="container" id="apks">
+			<div class="row">
+				<div class="col-3">
+					<button class="btn" onclick="phoneCall()"><img src="images/Call_48px.png"></button>
+				</div>
+				<div class="col-3">
+					<button class="btn"><img src="images/Chrome_48px.png"></button>
+				</div>
+				<div class="col-3">
+					<button class="btn" onclick="gen()"><img src="images/Redeem_48px.png"></button>
+				</div>
+				<div class="col-3">
+					<button class="btn"><img src="images/Message_48px.png"></button>
+				</div>
+			</div>
+		</div>
+		<div id="dial">
+			<div class="shadow-sm" id="box">
+				<input id="bb" type="" name="">
+					<img onclick="del()" class="float-right pt-3" src="images/Clear Symbol_48px.png" width="35" height="45">
+				<p>
+					<button onclick="dis('1')" class="btn float-left ml-3 text-primary"><h4>1 <br><sub><h6 style="font-size: 10px;">∞</h6></sub></h4></button>
+					<button onclick="dis('2')" class="btn text-primary"><h4>2 <br><sub><h6 style="font-size: 10px;">ABC</h6></sub></h4></button>
+					<button onclick="dis('3')" class="btn float-right mr-3 text-primary"><h4>3 <br><sub><h6 style="font-size: 10px;">DEF</h6></h4></sub></button>
+				</p>
+
+				<p>
+					<button onclick="dis('4')" class="btn float-left ml-3 text-primary"><h4>4 <br><sub><h6 style="font-size: 10px;">GHI</h6></sub></h4></button>
+					<button onclick="dis('5')" class="btn text-primary"><h4>5<br><sub><h6 style="font-size: 10px;">JKL</h6></sub></h4></button>
+					<button onclick="dis('6')" class="btn float-right mr-3 text-primary"><h4>6 <br><sub><h6 style="font-size: 10px;">MNO</h6></sub></h4></button>
+				</p>
+
+				<p>
+					<button onclick="dis('7')" class="btn float-left ml-3 text-primary"><h4>7<br><sub><h6 style="font-size: 10px;">PQRS</h6></sub></h4></button>
+					<button onclick="dis('8')" class="btn text-primary"><h4>8 <br><sub><h6 style="font-size: 10px;">TUV</h6></sub></h4></button>
+					<button onclick="dis('9')" class="btn float-right mr-3 text-primary"><h4>9 <br><sub><h6 style="font-size: 10px;">WXYZ</h6></sub></h4></button>
+				</p>  	
+
+				<p> 
+					<button onclick="dis('*')" class="btn float-left ml-3 text-primary"><h4>* </h4></button> 
+					<button onclick="dis('0')" class="btn text-primary"><h4>0 <br><sub"><h6 style="font-size: 10px;">+</h6></sub></h4></button> 
+					<button onclick="dis('#')" class="btn float-right mr-3 text-primary"><h4>#</h4></button>
+				 </p> 
+				<button onclick="dialIcon()" class="btn btn-sucess"><img style="margin-left: -10px; margin-top: -2px;" width="40" height="40" src="images/Call_48px.png"></button> 
+				<br><br>
+
+				<div class="container-fluid" id="callwith" style="display: none;">
+					<div class="row">
+						<div class="col-12">
+							<span><img src="images/1_48px.png" width="20" height="20"></span>
+							<span>
+								<button onclick="loadMtn()" class="btn">Mtn</button>
+							</span>
+							
+						</div>
+						<div class="col-12">
+							<span><img src="images/2_48px.png" width="20" height="20"></span>
+							<span>
+									<button onclick="loadAirtel()" class="btn">Airtel</button>
+							</span>
+						
+						</div>
+						<div class="col-12">
+							<span><img src="images/3_48px.png" width="20" height="20"></span>
+							<span>
+								<button onclick="loadGlo()" class="btn">Glo</button>
+							</span>
+							
+						</div>
+						<div class="col-12">
+							<span><img src="images/4_48px.png" width="20" height="20"></span>
+							<span>
+								<button onclick="etisalat()" class="btn">9mobile</button>
+							</span>							
+						</div>
+					</div>
+					<button class="btn float-right" onclick="cancel()">cancel</button>
+				</div> 
+			</div>
+				<div id="balance-box" align="center">
+					<p id="balanceDis"><br></p>
+						<button id="ok" onclick="okBtn()" class="btn float-right position-absolute" style="top: 57%; right: 2%;">ok</button>					
+					</div> 
+				
+		 </div> 
+		 <div class="container-fluid" id="outgoingopacity">
+			<div class="container-fluid" id="outgoingcall" style="margin-left: 500px;">
+				<br><br>
+					<h3 class="text-white h5 float-left">calling via <span id="callerNet"></span></h3>
+					<br><br><br>
+					<h3 class="text-white floar-left"><span id="callerNo"></span></h3>
+					<div class="container-fluid" align="center">
+
+						<div class="container-fluid w-50 mx-auto text-white h6 text-center" id="timecalculating">
+							<span id="firstHours"></span>
+							<span id="firstMins"></span>
+							<span id="firstSecs"></span>
+						</div>
+
+						<div class="row">
+							<div class="col-4">
+								<button class="btn speaker-btn"><img src="images/speaker.png" alt="speaker img"></button>
+							</div>
+							<div class="col-4">
+								<button class="btn mute-btn"><img src="images/mute.png" alt="mute img"></button>								
+							</div>
+							<div class="col-4">
+								<button class="btn bullet-btn"><img src="images/bullet.png" alt="bullet img"></button>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div>
+						<img src="images/maleuser.png" alt="user img" style="height: 150px; width: 150px;">
+						<br><br><br>
+						<button onclick="hangUpCall()" class="btn btn-danger hangup-btn"><img src="images/phone.png" alt="phone img" style="margin-left: -5px;"></button>
+					</div>
+			</div>	
+		 </div>
+		
+	<div> 
+		<hr id="bar" onclick="minimize()"> 
+	</div>
+	<div id="vv"></div>
+	</div>
+	<div class="container-fluid position-absolute" style="height: 595px; width: 310px; display: none; background-color: rgba(0,0,0, 0.7); border-radius: 10px; top: 6.3%; left: 3.3%;" id="callopacity"></div>
+
+	<!-- SECOND PHONE -->
+	<div class="container-fluid" id="secondPhone">
+		<hr class="on-btn-second">
+		<hr class="vol-up-second">
+		<hr class="vol-down-second">
+
+		<div class="camera-div position-absolute" align="center" style="margin-top: -270px; z-index: 1; left: -298px;">
+            <div style="height: 20px; width:20px; background-color: black; border-radius: 100%; border: 1px solid black; margin-left: 300px;	">
+            <div style="height: 10px; width: 10px; background-color: #ABB1BA; border-radius: 100%; border:1px solid #ABB1BA; margin-top: 4px;">
+                <div style="height: 5px; width: 5px; background-color: black; border-radius: 100%; border:1px solid black; margin-top: 2px; margin-left: -0.1px;">
+                    
+                </div>
+            </div>
+		</div>
+
+		<div id="notifyBarSecond" class="pl-2 position-absolute">
+			<span><img style="float: right; padding-right: 3px; padding-top: 2px;" src="images/whitebattery.png" alt="battery img"></span>
+			<span><img src="images/whitesignal1.png" alt="9mobile signal" style="height: 20px; width: 20px; float: right; margin-right: 5px;"></span>
+			<span><img src="images/whitesignal2.png" alt="glo signal" style="height: 20px; width: 20px; float: right;"></span>
+			<span><img src="images/whitesignal1.png" alt="airtel signal" style="height: 20px; width: 20px; float: right;"></span>
+			<span><img src="images/whitesignal2.png" alt="mtn signal" style="height: 20px; width: 20px; float: right;"></span>			
+		</div>
+
+		<div class="container-fluid" id="incoming-opacity">
+			<br><br><br>
+			<h3 class="text-white h5 float-left">Incoming call via <span id="incomingNet"></span></h3>
+					<br><br>
+					<h3 class="text-white floar-left"><span id="callerNo"></span></h3>
+					<br>
+					<div class="container-fluid w-50 text-center text-white h6" id="calculatingfirst">
+						<span id="loadHours"></span>
+						<span id="loadMins"></span>
+						<span id="loadSecs"></span>
+					</div>
+
+					<br>
+					<div class="container-fluid" align="center">
+						<div class="row">
+							<div class="col-4">
+								<button class="btn speaker-btn"><img src="images/speaker.png" alt="speaker img"></button>
+							</div>
+							<div class="col-4">
+								<button class="btn mute-btn"><img src="images/mute.png" alt="mute img"></button>								
+							</div>
+							<div class="col-4">
+								<button class="btn bullet-btn"><img src="images/bullet.png" alt="bullet img"></button>
+							</div>
+						</div>
+					</div>
+					<br><br><br>
+					<div>
+						<img src="images/maleuser.png" alt="user img" style="height: 150px; width: 150px;">
+						<br><br><br><br>
+						<span>
+							<button id="pickCall" class="btn btn-sucess pickup-btn" onclick="receiveCall()"><img src="images/phone.png" alt="phone img" style="margin-left: -5px;"></button>
+						</span>
+						<span style="margin-left: 100px;">
+						<button id="hangUp" class="btn btn-danger hangup-btn" onclick="hangUpCall()"><img src="images/phone.png" alt="phone img" style="margin-left: -5px;"></button>
+						</span>
+						
+					</div>
+		</div>
+		
+			
+	</div>							
+	<script src="script.js"></script>
+	<script src="call.js"></script>
+</body>
+</html>
